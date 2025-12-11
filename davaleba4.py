@@ -6,58 +6,58 @@
 # **უნდა გვქონდეს 4 ინფუთი - სიგრძე / რიცხვები უნდა თუ არა / დიდი და პატარა ასოები თუ უნდა / თუ უნდა სიმბოლოები
 #
 # **უნდა დაწეროთ ლოგიკა იმის მიხედვით რასაც აირჩევს მომხმარებელი და ბოლოს დაუგენერიროთ პაროლი.
-# import random
-# import string
-#
-# pwdlenght = input("შეიყვანეთ სიგრძე (number)")
-# pwdnumbers = input("შეიცავდეს რიცხვებს (yes/no)")
-# pwdalphabet = input("შეიცავდეს დიდ და პატარა ასოებს (yes/no)")
-# pwdsymbols = input ("შეიცავდეს სიმბოლოებს (yes/no)")
-# symbolstochoose = ""
-# pwd = ""
-# i=0
-# while i < int(pwdlenght):
-#     if pwdnumbers == "yes":
-#         symbolstochoose = string.digits
-#     if pwdalphabet == "yes":
-#         symbolstochoose = symbolstochoose + string.ascii_letters
-#     if pwdsymbols == "yes":
-#         symbolstochoose = symbolstochoose + string.punctuation
-#
-#     pwd = pwd + random.choice(symbolstochoose)
-#     i += 1
-#
-# print(f"{pwd}")
+import random
+import string
+
+pwdlenght = input("შეიყვანეთ სიგრძე (number)")
+pwdnumbers = input("შეიცავდეს რიცხვებს (yes/no)")
+pwdalphabet = input("შეიცავდეს დიდ და პატარა ასოებს (yes/no)")
+pwdsymbols = input ("შეიცავდეს სიმბოლოებს (yes/no)")
+symbolstochoose = ""
+pwd = ""
+i=0
+while i < int(pwdlenght):
+    if pwdnumbers == "yes":
+        symbolstochoose = string.digits
+    if pwdalphabet == "yes":
+        symbolstochoose = symbolstochoose + string.ascii_letters
+    if pwdsymbols == "yes":
+        symbolstochoose = symbolstochoose + string.punctuation
+
+    pwd = pwd + random.choice(symbolstochoose)
+    i += 1
+
+print(f"{pwd}")
 # # #2 დაწერე ფუნქცია (ფიბონაჩის რიგი) - რა არის ფიბონაჩი - ბოლო ორი ელემენტის ჯამით ვამატებთ ახალ რიცხვს,
 # # სანამ სიგრძე არ გახდება მომხმარებლის მიერ შემოყვანილი რიცხვი, აუცილებლად უნდა შემოიტანოს რიცხვი,
 # # სხვა რამის შემოტანის დროს უნდა შემოწმდეს რა შემოიტანა მომხმარებელმა და უნდა
 # # დაუსახელო აღნიშნული და უთხრა რომ მხოლოდ რიცხვი შემოიტანოს.
 # # მაგ: შემოიტანა სიმბოლო, უნდა უთხრა შენ შემოიტანე სიმბოლო არასწორია, მხოლოდ რიცხვი!
-# #from os.path import split
-#
-# length = input("შემოიტანე რიცხვი ")
-# while not length.isdigit():
-#         print(f"შენი შემოტანილი სიმბოლო არასწორია {type(length)}")
-#         length = input("შემოიტანე რიცხვი ")
-#
-# fibolist = [0, 1 ]
-# while len(fibolist) < int(length):
-#     fibolist.append(fibolist[-1] + fibolist[-2])
-# print (fibolist)
-#
+# # # from os.path import split
+
+length = input("შემოიტანე რიცხვი ")
+while not length.isdigit():
+        print(f"შენი შემოტანილი სიმბოლო არასწორია {type(length)}")
+        length = input("შემოიტანე რიცხვი ")
+
+fibolist = [0, 1 ]
+while len(fibolist) < int(length):
+    fibolist.append(fibolist[-1] + fibolist[-2])
+print (fibolist)
+
 # #3 ზედმეტსახელების გენერატორი
 # #მომხმარებელს შემოაქვს მხოლოდ ერთი სიტყვა(სხვა შემთხვევები დაბლოკე) და შენ სთავაზობ 5 ზედმეტსახელს ამ სიტყვასთან კავშირში.
-# myname = input("გთხოვთ შემოიყვანოთ ერთი სიტყვა: ")
-# while len(myname.split()) > 1:
-#         myname = input("გთხოვთ შემოიყვანოთ ერთი სიტყვა!: ")
-# addonwords = ["წითელი", "მაღალი", "შავტუხა", "მორბენალი", "პროგრამისტი"]
-#
-# i = 0
-#
-# while i < 5:
-#
-#     print(f"{addonwords[i]} {myname}")
-#     i += 1
+myname = input("გთხოვთ შემოიყვანოთ ერთი სიტყვა: ")
+while len(myname.split()) > 1:
+        myname = input("გთხოვთ შემოიყვანოთ ერთი სიტყვა!: ")
+addonwords = ["წითელი", "მაღალი", "შავტუხა", "მორბენალი", "პროგრამისტი"]
+
+i = 0
+
+while i < 5:
+
+    print(f"{addonwords[i]} {myname}")
+    i += 1
 #
 
 # #4 სორტირება
@@ -145,16 +145,16 @@ print(myfunction(3, 5, 7, 2, 22, 12, 33, 1, 4))
 # #7 მომხმარებელს შეჰყავს წინადადება, ამოცანა: გამოიანგარიშე თითოეული სიტყვის სიგრძე და დააბრუნე dictionary
 # მაგალითად: "Python is fun" → {"Python": 6, "is": 2, "fun": 3}
 
-# text = input("შეიყვანეთ წინადადება: ")
-# text = text.split()
-# textlist = list(text)
-# lengthlist = []
-# mydict = {}
-# for i in range(len(textlist)):
-#     lengthlist.append(len(textlist[i]))
-# for a in range(len(textlist)):
-#     mydict[textlist[a]] = lengthlist[a]
-# print(mydict)
+text = input("შეიყვანეთ წინადადება: ")
+text = text.split()
+textlist = list(text)
+lengthlist = []
+mydict = {}
+for i in range(len(textlist)):
+    lengthlist.append(len(textlist[i]))
+for a in range(len(textlist)):
+    mydict[textlist[a]] = lengthlist[a]
+print(mydict)
 
 # # შექმენით გითჰაბზე რეპოზიტორია, დაკლონეთ ედიტორში, 1,2,3 ამოცანის ამოხსნის შემდეგ მთავარ ბრენჩზე გააკეთე დამატება , კომიტი და აიტანე გითჰაბზე ეს სამი ამოცანა,
 # შემდეგ გააგრძელე მუშაობა, გააკეთე ახალი ბრენჩი სახელად “secondbranch” 4,5,6 ამოცანა ამოხსენი ამ ბრენჩზე და აიტანე გითჰაბზე,
