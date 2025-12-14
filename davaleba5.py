@@ -1,7 +1,17 @@
 #1 შექმენი გენერატორი, რომელიც ტექსტის თითოეულ სიმბოლოს აბრუნებს.
+##Word = “CODE”
 
-#Word = “CODE”
-
+# def my_generator(word):
+#     for symbol in word:
+#         yield symbol
+#
+#
+# gen = my_generator("code")
+#
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
 
 #2 დაწერე პროგრამა რომელშიც მომხმარებელი შემოიყვანს მხოლოდ ციფრებს, ლოგიკა უნდა იყოს შემდეგი: გვაქვს კონკრეტული ლისტი და
 # მომხმარებელი უნდა მიწვდეს შემოყვანილი ციფრით რომელიმე ელემენტს, თუ ვერ მიწვდება პროგრამა შეცდომაზე არ უნდა გავიდეს.
@@ -12,6 +22,40 @@
 #3 მომხმარებელს უნდა დავუსვათ 5 მათემატიკური შეკითხვა, თითოეულზე სწორი პასუხი არის 10 ქულა ხოლო არასწორი 0 ქულა,
 # მიღებული პასუხებიდან უნდა განვსაზღვროთ რამდენი ქულა აიღო მომხმარებელმა, შევქმნათ ლოფ ფაილი game.log და შევინახოთ
 # ყველა ქულა. ბოლოს გამოვუტანოთ მიღებული შედეგი
+# import logging
+#
+# logging.basicConfig(filename="game.log" , level=logging.INFO)
+#
+# question1 = input("1 + 1?")
+# answer1 = "2"
+# question2 = input("2 + 2?")
+# answer2 = "4"
+# question3 = input("3 + 3?")
+# answer3 = "6"
+# question4 = input("4 + 4?")
+# answer4 = "8"
+# question5 = input("5 + 5?")
+# answer5 = "10"
+# points = 0
+#
+# if question1 == answer1:
+#     points += 10
+#     logging.info(f"10 point added and is now {str(points)}")
+# if question2 == answer2:
+#     points += 10
+#     logging.info(f"10 point added and is now {str(points)}")
+# if question3 == answer3:
+#     points += 10
+#     logging.info(f"10 point added and is now {str(points)}")
+# if question4 == answer4:
+#     points += 10
+#     logging.info(f"10 point added and is now {str(points)}")
+# if question5 == answer5:
+#     points += 10
+#     logging.info(f"10 point added and is now {str(points)}")
+#
+# print (points)
+#
 
 
 #4 შექმენით ფაილი quiz.log, შექმენით გენერატორი რომელშიც შენახული იქნება 5 შეკითხვა და სათითაოდ დააბრუნებს, მომხმარებელმა
