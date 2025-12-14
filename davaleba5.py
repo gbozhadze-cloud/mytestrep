@@ -57,14 +57,65 @@
 # print (points)
 #
 
-
 #4 შექმენით ფაილი quiz.log, შექმენით გენერატორი რომელშიც შენახული იქნება 5 შეკითხვა და სათითაოდ დააბრუნებს, მომხმარებელმა
 # უნდა უპასუხოს ყველა შეკითხვას და პასუხები შეინახეთ ლოგ ფაილში.
-
+#
+# import logging
+# logging.basicConfig(filename="quiz.log" , level=logging.INFO)
+#
+# def question_gen ():
+#
+#     answer1 = input("question1?")
+#     logging.info (f"pasuxia {answer1}")
+#     yield answer1
+#
+#     answer2  = input("question2?")
+#     logging.info(f"pasuxia {answer2}")
+#     yield answer2
+#
+#     answer3  = input("question3?")
+#     logging.info(f"pasuxia {answer3}")
+#     yield answer3
+#
+#     answer4  = input("question4?")
+#     logging.info(f"pasuxia {answer4}")
+#     yield answer4
+#
+#     answer5  = input("question5?")
+#     logging.info(f"pasuxia {answer5}")
+#     yield answer5
+#
+# x = question_gen()
+#
+# print(next(x))
+# print(next(x))
+# print(next(x))
+# print(next(x))
+# print(next(x))
 
 #5 შექმენი პროგრამა სადაც მომხმარებელი ეჯიბრება კომპიუტერს: ქვა/ბადე/მაკრატელის თამაშში, თამაში არის სამამდე, კომპიუტერი
 # შემთხვევითობის პრინციპით ირჩევს ამ სამიდან 1-ს , ასევე ტერმინალში მომხმარებელი წერს ერთ-ერთს, ერთნაირის შემთხვევაში ფრეა
 # და გრძელდება თამაში 3-მდე, ვინც პირველი მიაღწევს 3-ს გამოიტანე შეტყობინება …..-მ გაიმარჯვა.
+
+import random
+points = 0
+mylist = ["qva","bade","makrateli"]
+
+pc1 = random.choice(mylist)
+pc2 = random.choice(mylist)
+pc3 = random.choice(mylist)
+
+# for i < points:
+#     if pc1 == input("first try"):
+#         points +=1
+#
+#
+# print(pc1)
+
+
+
+
+
 
 
 #6 პროგრამა კამათელზე - გვყავს ორი მომხმარებელი Gamer 1 & Gamer 2, თითოეულს უნდა გავაგორებინოთ კამათელი თითო თითოჯერ,
