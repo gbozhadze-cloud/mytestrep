@@ -16,8 +16,12 @@
 #2 დაწერე პროგრამა რომელშიც მომხმარებელი შემოიყვანს მხოლოდ ციფრებს, ლოგიკა უნდა იყოს შემდეგი: გვაქვს კონკრეტული ლისტი და
 # მომხმარებელი უნდა მიწვდეს შემოყვანილი ციფრით რომელიმე ელემენტს, თუ ვერ მიწვდება პროგრამა შეცდომაზე არ უნდა გავიდეს.
 
-#arr = [1, 2, 3,4,5,6,7,8,9]
-
+# try:
+#     arr = [1,2,3,4,5,6,7,8,9]
+#     x = arr.index(int(input("შეიყვანე ინდექსი: ")))
+#     print(x)
+# except ValueError:
+#     print("ასეთი ინდექსი არ არსებობს")
 
 #3 მომხმარებელს უნდა დავუსვათ 5 მათემატიკური შეკითხვა, თითოეულზე სწორი პასუხი არის 10 ქულა ხოლო არასწორი 0 ქულა,
 # მიღებული პასუხებიდან უნდა განვსაზღვროთ რამდენი ქულა აიღო მომხმარებელმა, შევქმნათ ლოფ ფაილი game.log და შევინახოთ
@@ -97,29 +101,47 @@
 # შემთხვევითობის პრინციპით ირჩევს ამ სამიდან 1-ს , ასევე ტერმინალში მომხმარებელი წერს ერთ-ერთს, ერთნაირის შემთხვევაში ფრეა
 # და გრძელდება თამაში 3-მდე, ვინც პირველი მიაღწევს 3-ს გამოიტანე შეტყობინება …..-მ გაიმარჯვა.
 
-import random
-points = 0
-mylist = ["qva","bade","makrateli"]
-
-pc1 = random.choice(mylist)
-pc2 = random.choice(mylist)
-pc3 = random.choice(mylist)
-
-# for i < points:
-#     if pc1 == input("first try"):
-#         points +=1
+# import random
+# ##0 fre, 1 momxmarebeli, 2 kompiuteri)
+# rulesdic = {"qvaqva":0,
+#             "qvabade":2,
+#             "qvamakrateli":1,
+#             "badeqva":1,
+#             "badebade":0,
+#             "bademakrateli":2,
+#             "makrateliqva":2,
+#             "makratelimakrateli":0,
+#             "makratelibade":1 }
+# pcpoints = 0
+# points = 0
+# combine = ""
+# mylist = ["qva","bade","makrateli"]
 #
-#
-# print(pc1)
-
-
-
-
-
-
+# while max(pcpoints,points) < 3:
+#     pcchoice = random.choice(mylist)
+#     userinput = input("please try(qva, bade, makrateli): ")
+#     combine = userinput+pcchoice
+#     if rulesdic[combine] == 1:
+#         points += 1
+#     elif rulesdic[combine] == 2:
+#         pcpoints += 1
+#     print(f"კომპიუტერის ქულა {pcpoints} მომხმარებლის ქულა {points}")
 
 #6 პროგრამა კამათელზე - გვყავს ორი მომხმარებელი Gamer 1 & Gamer 2, თითოეულს უნდა გავაგორებინოთ კამათელი თითო თითოჯერ,
 # თუ ფრეა ვიმეორებთ, სხვა შემთხვევაში მოგებული მოთამაშე გამოგვაქვს ტერმინალში.
+
+# import random
+# while True:
+#     player1 = random.randint(1, 6)
+#     player2 = random.randint(1, 6)
+#
+#     if player1 != player2:
+#         if player1 > player2:
+#             print(f"winner is player1 {player1}:{player2}")
+#         else:
+#             print(f"winner is player2 {player1}:{player2}")
+#         break
+
 
 
 #დავალება მოამზადეთ მხოლოდ 1 ფაილში და ისე ატვირთეთ, გამოიყენეთ PEP8 სტანდარტი და მიჰყევით მხოლოდ ამოცანის პირობას.
