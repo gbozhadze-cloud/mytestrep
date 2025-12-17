@@ -43,6 +43,7 @@
 #     gradelist.append(statistics.mean(item["grades"]))
 #
 # print(max(gradelist))
+from http.cookiejar import user_domain_match
 
 # იპოვე სტუდენტი, რომელსაც აქვს საშუალო ქულის მიხედვით საუკეთესო შედეგი.
 #
@@ -113,11 +114,30 @@
 #
 # #8 ამოიღე ყველა პოსტი https://jsonplaceholder.typicode.com/posts, შემდეგ იპოვე ავტორის სახელი (users API-დან) და დაბეჭდე:
 # "Post Title – Author Name"
+# import requests
+# response = requests.get("https://jsonplaceholder.typicode.com/posts")
+# todolist = response.json()
+# postdict = {}
 #
+# responseusers = requests.get("https://jsonplaceholder.typicode.com/users")
+# userslist = responseusers.json()
+# usersdict = {}
+#
+# for item in todolist:
+#     postdict.update({item["userId"]:item["title"]})
+# for item in userslist:
+#     usersdict.update ({item["id"]:item["name"]})
+# # print(usersdict)
+# # print(postdict)
+#
+# combinedict = {}
+# for i in postdict:
+#     combinedict.update({usersdict[i]:postdict[i]})
+# #print(combinedict)
+#
+# print(dict(list(combinedict.items())[:5]))    #tupleში გადავიყვანე 5 ცალი მოვჭერი და უკან დიქტში დავაბრუნე
+
 # გამოიტანე მხოლოდ პირველი 5
-#
-#
-#
 #
 # დავალება დაწერეთ 1 ფაილში და ისე ატვირთეთ Classroom-ში ან გამიზიარეთ Github-ის მისამართი.
 #
