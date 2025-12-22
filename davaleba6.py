@@ -135,7 +135,7 @@ from http.cookiejar import user_domain_match
 #     combinedict.update({usersdict[i]:postdict[i]})
 # #print(combinedict)
 #
-# print(dict(list(combinedict.items())[:5]))    #tupleში გადავიყვანე 5 ცალი მოვჭერი და უკან დიქტში დავაბრუნე
+# print(dict(list(combinedict.items())[:5]))    #tupleში გადავიყვანე 5 ცალი მოვჭერი და უკან დიქტში დავაბრუნე?
 
 # გამოიტანე მხოლოდ პირველი 5
 #
