@@ -27,27 +27,78 @@
 # - სწორი ბალანსი
 # - უარყოფითი თანხის შეტანისას შეცდომა
 # - თანხის გამოტანა ბალანსზე მეტისას შეცდომა
-import unittest
-
-mybalance = 0
-
-def deposit(x):
-    if x <= 0:
-        print("შესატანი თანხა უნდა იყოს 0 ზე მეტი")
-    return mybalance + x
-
-class mydeposittest(unittest.TestCase):
-    def deposit(self):
-        return deposit(10)
-
-
-
-
-
-
-
+#
+# import unittest
+#
+# mybalance = 0
+#
+# def deposit(x):
+#     global mybalance
+#     if x <= 0:
+#         raise ValueError("შესატანი თანხა უნდა იყოს 0 ზე მეტი")
+#     mybalance += x
+#     return mybalance
+# def withdraw(x):
+#     global mybalance
+#     if x <= 0:
+#         raise ValueError("თანხა უნდა იყოს 0 ზე მეტი")
+#     if x > mybalance:
+#         raise ValueError("არასაკმარისი ბალანსი")
+#     mybalance -= x
+#     return mybalance
+#
+# class deposittest(unittest.TestCase):
+#
+#     def ganuleba(self):
+#         global mybalance
+#         mybalance = 0
+#     def testok(self):
+#         deposit(100)
+#         withdraw(40)
+#         self.assertEqual(mybalance, 60)
+#     def negative(self):
+#         with self.assertRaises(ValueError):
+#             deposit(-10)
+#     def arasakmarisi(self):
+#         with self.assertRaises(ValueError):
+#             withdraw(100)
+#
+# if __name__ == "__main__":
+#     unittest.main()
 #
 # #3 unittest3
 #
 # შექმენით ფუნქცია რომელიც იღებს JSON (dict) response-ს და აბრუნებს "status"-ის მნიშვნელობას. თუ status არ არსებობს → შეცდომა.
 # დაწერეთ ტესტები
+#
+# import unittest
+#
+# def myfunction(x):
+#     if x["status"] == "":
+#         raise ValueError("სტატუსის შეცდომა")
+#     else:
+#         return x["status"]
+#
+#
+# class mytest(unittest.TestCase):
+#
+#     def testok(self):
+#         y = {"status":201}
+#         myfunction(y)
+#         self.assertEqual(myfunction(y), 201)
+#
+#     def testnegative(self):
+#         with self.assertRaises(ValueError):
+#             y = {"status": ""}
+#             print(myfunction(y))
+#
+# if __name__ == "__main__":
+#      unittest.main()
+
+
+
+
+
+
+
+

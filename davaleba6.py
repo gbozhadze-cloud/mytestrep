@@ -43,7 +43,7 @@
 #     gradelist.append(statistics.mean(item["grades"]))
 #
 # print(max(gradelist))
-from http.cookiejar import user_domain_match
+#from http.cookiejar import user_domain_match
 
 # იპოვე სტუდენტი, რომელსაც აქვს საშუალო ქულის მიხედვით საუკეთესო შედეგი.
 #
