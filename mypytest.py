@@ -39,33 +39,32 @@
 #     with pytest.raises(ValueError):
 #         emailcheck("noemailsymbol")
 
-
 # #6 შექმენით თამაში HangMan - სადაც ცვლადში შეინახავთ სიტყვას და მომხმარებელს ექნება ასოების შემოტანის საშუალება, თუ
 # გამოიცნობს სანამ ცდების რაოდენობა ამოიწურება გამოიტანე "თქვენ გამოიცანით სიტყვა" თუ ვერ გამოიცნობს და ამოეწურება ცდები
 # გამოიტანე "თქვენ დამარცხდით". ამ ყველაფრისთვის გამოიყენეთ რომელიმე ტესტირების მოდული და გატესტეთ თქვენი დაწერილი კოდი.
 # (აუცილებელია მომხმარებელმა შემოიტანოს მხოლოდ სტრინგი, სხვა მონაცემთა ტიპი უნდა ვუგულებელვყოთ).
 
-import pytest
+# import pytest
+#
+# def hangman (my_word = "table",tries = 10, message = "თქვენ დამარცხდით"):
+#     for i in range(tries):
+#         user_word = input("გთხოვთ შეიყვანოთ სიტყვა: ")
+#         if user_word.isalpha():
+#             if my_word == user_word:
+#                 message = "თქვენ გამოიცანით სიტყვა!"
+#                 break
+#             else:
+#                 print("კიდევ სცადეთ")
+#                 tries -= 1
+#         else:
+#             raise ValueError("შეიყვანეთ მხოლოდ ანბანის სიმბოლოები")
+    #     return message
 
-def hangman (my_word = "table",tries = 10, message = "თქვენ დამარცხდით"):
-    for i in range(tries):
-        user_word = input("გთხოვთ შეიყვანოთ სიტყვა: ")
-        if user_word.isalpha():
-            if my_word == user_word:
-                message = "თქვენ გამოიცანით სიტყვა!"
-                break
-            else:
-                print("კიდევ სცადეთ")
-                tries -= 1
-        else:
-            raise ValueError("შეიყვანეთ მხოლოდ ანბანის სიმბოლოები")
-    return message
-
-# def test_alpha():
-#     assert hangman() == "თქვენ გამოიცანით სიტყვა!" or hangman() == "თქვენ დამარცხდით"
-# def test_nonalpha():
-#     with pytest.raises(ValueError):
-#         hangman()
+## def test_alpha():
+##    assert hangman() == "თქვენ გამოიცანით სიტყვა!" or hangman() == "თქვენ დამარცხდით"
+## def test_nonalpha():
+##     with pytest.raises(ValueError):
+##         hangman()
 
 
 
