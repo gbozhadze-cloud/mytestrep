@@ -98,46 +98,94 @@
 # #4 ამოცანა 4
 # შექმენი კლასი Person, რომელსაც ექნება __del__() მეთოდი, რომელიც ბეჭდავს "Person removed" როცა ობიექტი წაიშლება.
 # შექმენი ობიექტი, შემდეგ წაშალე del-ით.
+
+# class Person:
+#     def __init__(self, name):
+#         self.name = name
 #
+#     def __del__(self):
+#         print("Person removed")
 #
+# x = Person("giga")
+# del x
 #
+
 # #5 ამოცანა 5
 # შექმენი კლასი CustomList, რომელიც:
-#
 # ინახავს ელემენტებს.
-#
 # __getitem__() – აბრუნებს ელემენტს ინდექსით.
-#
 # __setitem__() – ცვლის ელემენტს.
-#
 # __iter__() – Iterable უნდა იყოს.
-#
 # გამოიყენე for ციკლში შენი CustomList.
+
+#
+# class CustomList:
+#     def __init__(self, item):
+#         self.item = item
+#
+#     def __getitem__(self, index):
+#         return self.item[index]
+#
+#     def __setitem__(self, index, value):
+#         self.item[index] = value
+#
+#     def __iter__(self):
+#         return iter(self.item)
+#
+# x = CustomList (["111", "222", "333"])
+#
+# # print(x[1])      # 222
+# # x[1] = 444
+# # print(x[1])
 #
 #
+# for i in x:
+#     print(i)
+#
+
+
 # #6 ამოცანა 6
 # შექმენი კლასი Refrigerator, რომელსაც ექნება:
-#
 # ატრიბუტი items (სია).
-#
 # __contains__() – აბრუნებს True, თუ პროდუქტი მაცივარშია ("milk" in fridge).
-#
 # __str__() – "Fridge with N items".
-#
 # __del__() – "Fridge unplugged!".
-#
 # დაამატე პროდუქტები, შეამოწმე "milk" in fridge, დაბეჭდე ობიექტი და ბოლოს წაშალე.
+
+# class Refrigerator:
+#     def __init__(self, items):
+#         self.items = items
+#     def __contains__(self, item):
+#         return
+#     def __str__(self):
+#         return "Fridge with N items"
+#     def __del__(self):
+#         print("Fridge unplugged!")
 #
+# x = Refrigerator(["milk","egg", "ketchup"])
 #
+# print(x)
+
 # #7 ამოცანა 7
 # შექმენი კლასი FunnyCalculator, რომელსაც ექნება:
-#
 # __add__() – აბრუნებს "Why are you adding numbers? Just buy a calculator".
-#
 # __mul__() – აბრუნებს "Multiplication is too mainstream...".
-#
 # __truediv__() – თუ გაყოფ 0-ზე, ბეჭდავს "ZeroDivisionError? Nah, let’s just say infinity"
-#
 # __str__() – "I’m the funniest calculator in Python!".
-#
 # ცადე calc + 5, calc * 2, 10 / calc და ნახე რა მოხდება.
+
+# class FunnyCalculator:
+#     def __init__(self,a,b):
+#         self.a = a
+#         self.b = b
+#     def __add__(self, other):
+#         return "Why are you adding numbers? Just buy a calculator"
+#     def __mul__(self, other):
+#         return "Multiplication is too mainstream..."
+#     def __truediv__(self, other):
+#         return "ZeroDivisionError? Nah, let’s just say infinity"
+#     def __str__(self):
+#         return "I’m the funniest calculator in Python!"
+#
+# calc = FunnyCalculator (5, 2)
+# print(calc + 5, calc * 2, calc )
