@@ -78,9 +78,35 @@
 # მოთამაშე მოიგებს თუ სამივე სიმბოლო დაემთხვევა.
 #
 # აუცილებლად გატესტეთ, სცადეთ რამოდენიმე ვარიანტის გაშვება.
-
-
-
+# import random
+# import string
+#
+# class SlotMachine:
+#     game_difficulty = 0
+#
+#     @staticmethod
+#     def random_symbols(difficulty=0):
+#         if difficulty == 0:
+#             return random.choices(string.digits, k = 3)
+#         elif difficulty == 1:
+#             return random.choices(string.ascii_lowercase, k = 3)
+#         else:
+#             return random.choices(string.ascii_letters + string.digits, k = 3)
+#
+#     @classmethod
+#     def set_difficulty(cls, difficulty):
+#         cls.game_difficulty = difficulty
+#
+# def game(gamer_symbols=[], difficulty=0):
+#     if difficulty != 0:
+#         SlotMachine.set_difficulty(difficulty)
+#     result = SlotMachine.random_symbols(difficulty)
+#     if gamer_symbols == result:
+#         return print("შენ გაიმარჯვე!")
+#     else:
+#         return print(f"შენ დამარცხდი :( სლოტმა აჩვენა: {result} შენ გქონდა {gamer_symbols}")
+#
+# print(game(["a","a","a"],1))
 
 # #4 გმირის ქულების სისტემა
 # შექმენით Hero კლასი.
@@ -128,15 +154,15 @@
 # აუცილებლად გატესტეთ კოდი, შეასრულეთ მხოლოდ პირობაში მოცემული ვარიანტი, არაა საჭირო
 # დამატება.
 
-class Card:
-    def __init__(self, rank, suit):
-        self.suit = rank
-        self.value = suit
-
-class Deck:
-    def __init__(self):
-
-        pass
-    @classmethod
-    def create_standard_list(cls):
-        deck = cls()
+# class Card:
+#     def __init__(self, rank, suit):
+#         self.suit = rank
+#         self.value = suit
+#
+# class Deck:
+#     def __init__(self):
+#
+#         pass
+#     @classmethod
+#     def create_standard_list(cls):
+#         deck = cls()
