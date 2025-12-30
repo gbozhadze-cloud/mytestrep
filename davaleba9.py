@@ -87,12 +87,38 @@
 # private health, private score.
 # staticmethod random_event() -> შემთხვევითი მოვლენა (ქულა ემატება ან ჯანმრთელობა
 # აკლდება).
-#
 # classmethod from_name(cls, name) -> ქმნის გმირს სახელით.
 # მემკვიდრე SuperHero -> დამატებითი ძალა.
 # super() გამოიძახეთ მშობლის კონსტრუქტორისთვის.
-# თამაში გრძელდება სანამ გმირის health > 0.
+# თამაში გრძელდება სანამ გმირის health > 0.  --- აქ მგონი პირიქით უნდა იყოს? სანამ health გაუნულდება
+# import random
+# class Hero:
+#     def __init__(self, health = 10, score = 0):
+#         self.__health = health
+#         self.__score = score
 #
+#     def add_score(self):
+#         self.__score += 1
+#
+#     def remove_health(self):
+#         self.__health -= 1
+#
+#     def fight(self):
+#         while self.__health > 0:
+#             if Hero.random_event() == "removehealth":
+#                 self.remove_health()
+#             else:
+#                 self.add_score()
+#             print(f"score is : {self.__score}, health is: {self.__health}")
+#         #return print(f"score is : {self.__score}, health is: {self.__health}")
+#
+#     @staticmethod
+#     def random_event():
+#         return random.choice(["addscore","removehealth"])
+#
+# h = Hero()
+# h.fight()
+
 # #5 პროგრამა კარტზე
 # Card კლასი (rank, suit).
 # Deck კლასი -> private cards list.
@@ -101,3 +127,16 @@
 # მოთამაშე იღებს 5 კარტს და ამოწმებს, აქვს თუ არა “მარტივი კომბინაცია” (მაგ: ორი ერთნაირი)
 # აუცილებლად გატესტეთ კოდი, შეასრულეთ მხოლოდ პირობაში მოცემული ვარიანტი, არაა საჭირო
 # დამატება.
+
+class Card:
+    def __init__(self, rank, suit):
+        self.suit = rank
+        self.value = suit
+
+class Deck:
+    def __init__(self):
+
+        pass
+    @classmethod
+    def create_standard_list(cls):
+        deck = cls()
