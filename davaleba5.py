@@ -65,8 +65,8 @@
 #4 შექმენით ფაილი quiz.log, შექმენით გენერატორი რომელშიც შენახული იქნება 5 შეკითხვა და სათითაოდ დააბრუნებს, მომხმარებელმა
 # უნდა უპასუხოს ყველა შეკითხვას და პასუხები შეინახეთ ლოგ ფაილში.
 #
-# import logging
-# logging.basicConfig(filename="quiz.log" , level=logging.INFO)
+    # import logging
+    # logging.basicConfig(filename="quiz.log" , level=logging.INFO)
 #
 # def question_gen ():
 #
