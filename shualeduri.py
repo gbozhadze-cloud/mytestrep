@@ -335,3 +335,29 @@ import random
 # - მომხმარებელი თუ შემოიყვანს სტრინგს უნდა დაარეგისტრიროთ და
 # გამოიტანოთ ყველა შენახული მონაცემი:"ელ-ფოსტა", "სახელი", "ზედმეტსახელი"
 # და პაროლი
+
+import string
+
+email = "gbozhadze@gmail.com"
+nickname = "gigla"
+pwd = "mypass"
+
+
+
+while True:
+    name = input("გთხოვთ შეიყვანეთ სახელი (უნდა შეიცავდეს მხოლოდ დაბალი რეგისტრის ლათინურ სიმბოლოებს: ")
+    if all(symbol in string.ascii_lowercase for symbol in name):
+        print("სახელი მიღებულია!")
+        break
+    elif all(symbol in string.ascii_uppercase for symbol in name):
+        print("შეიცავს მაღალი რეგისტრის სიმბოლოებს, შეიყვანეთ თავიდან")
+    elif all(symbol in string.punctuation for symbol in name):
+        print("შეიცავს მაღალი არასტანდარტულ სიმბოლოებს, კიდევ სცადეთ.")
+    elif all(symbol in string.whitespace for symbol in name):
+        print("შეიცავს სფეისებს, ტაბებს და ა.შ., კიდევ სცადეთ.")
+    elif all(symbol in string.digits for symbol in name):
+        print("შეიცავს ციფრებს, კიდევ სცადეთ.")
+
+
+
+
