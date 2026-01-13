@@ -23,7 +23,7 @@
 # მომხმარებელი დაამატებს წიგნებს
 # 6. ვალიდაცია არაა საჭირო lower/upper და ა.შ. (მომხმარებელს ყოველთვის შეჰყავს
 # სწორი ინფორმაცია)
-
+import random
 
 ##### დასაწყისი
 # booksdict = [
@@ -254,23 +254,66 @@
 
 # #4 ლატარიის სიმულატორი
 # --------------------------
-#
 # - კომპიუტერი ირჩევს 6 შემთხვევით რიცხვს 1–დან 49-მდე
 # - მოთამაშეს შეჰყავს 6 რიცხვი
 # - ითვლება, რამდენი დაემთხვა
 # - წინასწარ გაწერილია გასათამაშებელი თანხა
 # - logging ინახავს ყველა გათამაშებას და შედეგს
 # - მომხმარებელს ყოველთვის შემოჰყავს სწორი მნიშვნელობები
-#
 # --------------------------------------------------------
-#
 # ლოგიკა:
 # 1. 6-6 დამთხვევის შემთხვევაში თამაშდება JACKPOT
 # 2. 6-5 დამთხვევის შემთხვევაში JACKPOT-ის თანხას ვაკლებთ 40%-ს
 # 3. 6-4 დამთხვევის შემთხვევაში JACKPOT-ის თანხას ვაკლებთ 60%-ს
 # 4. 6-3 დამთხვევის შემთხვევაში JACKPOT-ის თანხას ვაკლებთ 80%-ს
 # 5. 6-2 და 6-1 დამთხვევის შემთხვევაში მოთამაშე ვერაფერს ვერ იგებს
+# ####### დასაწყისი
+# import random
+# import logging
+# logging.basicConfig(filename="lottery.log", level=logging.INFO, format="%(asctime)s - %(message)s",encoding="utf-8")
+# numberlist = []
+# jackpot = 1000
+# for i in range (1, 49):
+#     numberlist.append(i)
 #
+# computerlist = []
+#
+# for i in range(6):
+#     x = random.choice(numberlist)
+#     computerlist.append(x)
+#     numberlist.remove(x)
+#
+# print(computerlist)
+# logging.info(f"კომპიუტერის რიცხვები არის : {computerlist}")
+# userpoints = 0
+#
+# for i in range (6):
+#     usernumber = int(input(f"გთხოვთ შეიყვანოთ რიცხვი, რიგითობა {i+1}: "))
+#     if usernumber in computerlist:
+#         userpoints += 1
+#         logging.info(f"მომხმარებელმა აირჩია {usernumber} დამთხვევათა რაოდენობა შეადგენს {userpoints}")
+#     else:
+#         logging.info(f"მომხმარებელმა აირჩია {usernumber} , ეს რიცხვი არცერთს არ ემთხვევა")
+#
+#     print(f"მომხარებლის დამთხვევათა რაოდენობა {userpoints}")
+#
+#
+# if userpoints == 6:
+#     print(f"გილოცავთ, თქვენ მოიგეთ ჯეკპოტი {jackpot}")
+#     logging.info(f"მოგებული თანხა შეადგენს {jackpot}")
+# elif userpoints == 5:
+#     print(f"გილოცავთ, თქვენ მოიგეთ ჯეკპოტი {jackpot*0.6}")
+#     logging.info(f"მოგებული თანხა შეადგენს {jackpot*0.6}")
+# elif userpoints == 4:
+#     print(f"გილოცავთ, თქვენ მოიგეთ ჯეკპოტი {jackpot*0.4}")
+#     logging.info(f"მოგებული თანხა შეადგენს {jackpot * 0.4}")
+# elif userpoints == 3:
+#     print(f"გილოცავთ, თქვენ მოიგეთ ჯეკპოტი {jackpot*0.2}")
+#     logging.info(f"მოგებული თანხა შეადგენს {jackpot * 0.2}")
+# else:
+#     print("სამწუხაროდ თქვენ წააგეთ :(")
+#     logging.info(f"თანხა მოგებული არ არის")
+
 # #5 რეგისტრაციის სიმულატორი
 # -------------------------------
 #
