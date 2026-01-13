@@ -1,0 +1,22 @@
+.layout {
+display: flex}
+
+.sidebar {
+    width: 200px;
+    flex-shrink: 0;
+ }
+
+.image-box {
+    width: 50%;}
+
+.image-box img {
+    width: 100%;
+    height: auto ;
+}
+
+.image-box p {
+    text-align: justify;
+    margin-top: 5px;
+    font-size: 16px;
+    color: #555;
+}
